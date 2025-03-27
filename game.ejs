@@ -1,0 +1,25 @@
+<%- include("/includes/head.ejs") %>
+
+  <body>
+    <h1>Roll Dice</h1>
+    <h2>dice gave value :<%= diceVal %></h2>
+    <% if(diceVal == 6){ %>
+    <h1>Congratulation <%= name %></h1>
+
+    <br /><br /><br />
+    <h2>game lost players</h2>
+    <% for(let names of lostPlayers) {%>
+    <li
+      style="justify-content: center; align-items: center; text-align: center"
+    >
+      <%= names %>
+    </li>
+    <% } %> <% } else { %>
+    <h1 id="h11">
+      Try again, after each and every night , there is one morning with positive
+      energy..
+    </h1>
+    <% } %>
+    <!-- <script src="/script.js"></script> -->
+  </body>
+</html>
